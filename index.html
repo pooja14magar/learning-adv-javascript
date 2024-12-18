@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adv-javascript</title>
+</head>
+<body>
+    <script>
+
+        // default parameters
+        function talk(msg="hello"){ 
+            document.write(msg);
+        }
+        talk();
+
+        document.write("<br> <br>")
+
+        //reset parameters
+        function sum(...num){
+            let result = 0;
+
+            for(let i=0; i<num.length; i++){
+                result +=num[i];
+            }
+            document.write(result);
+        }
+
+        sum(5,6,7);
+
+
+        document.write("<br> <br>")
+
+// spread operators
+let array1 = [1,2,3];
+let array2 =  [4,5,6,...array1];
+document.write(array2);
+
+
+document.write("<br> <br>")
+
+
+// for of loop
+let score = [80,39,70,54];
+ 
+for(let x of score){
+    document.write(x);
+}
+
+
+document.write("<br> <br>")
+
+
+// template Literals
+let str = `hello 
+world`;
+document.write(str);  
+
+document.write("<br> <br>")  
+
+let a = "vishwajeet";
+document.write(`My name is ${a}.`)
+
+
+
+document.write("<br> <br>")  
+
+// array Destructuring
+let book = ["advance js",200,150];
+let[name,page,price]=book;
+document.write(name);
+
+
+document.write("<br> <br>")  
+
+//object Destructuring
+
+let book1 = {
+    book_name: "advance js",
+    page1: 200,
+    price1: 150,
+    publication : {
+        pub_name : "techgun",
+        year : 2024
+    }
+};
+
+let{book_name:title, page1, price1 ,publication:{pub_name}} = book1;
+document.write(pub_name);
+
+document.write("<br> <br>")  
+//modules
+    </script>
+</body>
+</html>
